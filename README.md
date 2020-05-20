@@ -27,7 +27,7 @@ Copy the `.env` file into a `.env.local` file and configure the variables for th
 
 ### Firebase tutorials
 
-[Firebase as simple database to React app](https://sebhastian.com/react-firebase-real-time-database-guide)\
-[A Firebase in React Tutorial for Beginners](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial)
+- [Firebase as simple database to React app](https://sebhastian.com/react-firebase-real-time-database-guide)
+- [A Firebase in React Tutorial for Beginners](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial)
 
 
