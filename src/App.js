@@ -2,6 +2,7 @@ import React from 'react'
 
 import './app.css'
 import firebase from './firebase'
+import Movie from './components/Movie'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -64,23 +65,27 @@ export default class App extends React.Component {
   }
 
   removeMovie(movieId) {
-    const movieRef = firebase.database().ref(`/movies/${movieId}`);
-    movieRef.remove();
+    const movieRef = firebase.database().ref(`/movies/${movieId}`)
+    movieRef.remove()
   }
 
   render() {
     return (
       <div className="container">
-        <h1>Movie Tracker</h1>
+        <h1 className="text-4xl font-bold mb-4">Movie Tracker</h1>
 
-        <div>
-          <h2>Add a movie</h2>
+        <div className="mb-4">
+          <h2 className="text-2xl font-semibold mb-4">Add a movie</h2>
 
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label>Title</label>
+          <form
+            className="text-sm"
+            onSubmit={this.handleSubmit}
+          >
+            <div className="flex items-center mb-2">
+              <label className="w-32" htmlFor="titleInput">Title</label>
               <input
                 id="titleInput"
+                className="px-2 leading-6 border border-black rounded focus:outline-none"
                 name="movieTitle"
                 type="text"
                 value={this.state.movieTitle}
@@ -88,10 +93,11 @@ export default class App extends React.Component {
               />
             </div>
 
-            <div>
-              <label>Genre</label>
+            <div className="flex items-center mb-2">
+              <label className="w-32" htmlFor="genreInput">Genre</label>
               <input
                 id="genreInput"
+                className="px-2 leading-6 border border-black rounded focus:outline-none"
                 name="movieGenre"
                 type="text"
                 value={this.state.movieGenre}
@@ -99,10 +105,11 @@ export default class App extends React.Component {
               />
             </div>
 
-            <div>
-              <label>Rating</label>
+            <div className="flex items-center mb-2">
+              <label className="w-32" htmlFor="ratingInput">Rating</label>
               <input
                 id="ratingInput"
+                className="px-2 leading-6 border border-black rounded focus:outline-none"
                 name="movieRating"
                 type="text"
                 value={this.state.movieRating}
@@ -115,16 +122,16 @@ export default class App extends React.Component {
         </div>
 
         <div>
+          <h2 className="text-2xl font-semibold">Your movies</h2>
+
           <ul>
             {this.state.movies.map(movie => {
               return (
-                <li key={movie.id}>
-                  <h3>{movie.title}</h3>
-                  <div>{movie.genre}</div>
-                  <div>{movie.rating}</div>
-
-                  <button onClick={() => this.removeMovie(movie.id)}>Remove movie</button>
-                </li>
+                <Movie
+                  key={movie.id}
+                  movie={movie}
+                  removeMovie={this.removeMovie}
+                />
               )
             })}
           </ul>
