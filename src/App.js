@@ -34,6 +34,7 @@ export default class App extends React.Component {
           rating: movies[movie].rating
         })
       }
+
       this.setState({
         movies: stateMovies
       })
