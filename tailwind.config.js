@@ -17,7 +17,9 @@ module.exports = {
       }
     }
   },
-  variants: {},
+  variants: {
+    opacity: ['responsive', 'hover', 'focus', 'group-hover']
+  },
   plugins: [
     plugin(function ({ addUtilities }) {
       const containers = {

@@ -72,8 +72,8 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h1 className="text-4xl font-bold mb-4">Movie Tracker</h1>
+      <div className="container pt-8">
+        <h1 className="text-4xl font-bold leading-none mb-4">Movie Tracker</h1>
 
         <div className="mb-4">
           <h2 className="text-2xl font-semibold mb-4">Add a movie</h2>
@@ -118,24 +118,27 @@ export default class App extends React.Component {
               />
             </div>
 
-            <button type="submit">Add movie</button>
+            <button className="px-2 leading-8 text-sm text-white bg-black rounded"
+                    type="submit">
+              Add movie
+            </button>
           </form>
         </div>
 
         <div>
           <h2 className="text-2xl font-semibold">Your movies</h2>
 
-          <ul>
+          {this.state.movies && <ul className="max-w-sm">
             {this.state.movies.map(movie => {
               return (
                 <Movie
                   key={movie.id}
                   movie={movie}
-                  removeMovie={this.removeMovie}
+                  remove={this.removeMovie}
                 />
               )
             })}
-          </ul>
+          </ul>}
         </div>
       </div>
     )
