@@ -1,12 +1,13 @@
 import React from 'react'
 import './App.css'
 
-import * as firebase from 'firebase'
+import firebase from 'firebase'
 import config from './config'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
+
     firebase.initializeApp(config)
 
     this.state = {
