@@ -3,6 +3,7 @@ import "./App.css";
 
 import * as firebase from "firebase";
 import config from "./config";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
