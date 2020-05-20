@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './app.css'
 import firebase from './firebase'
 
 export default class App extends React.Component {
@@ -69,7 +70,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="container">
         <h1>Movie Tracker</h1>
 
         <div>
@@ -128,7 +129,7 @@ export default class App extends React.Component {
             })}
           </ul>
         </div>
-      </>
+      </div>
     )
   }
 }
