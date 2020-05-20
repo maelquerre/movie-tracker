@@ -45,8 +45,8 @@ This will build the app for production to the build folder.
 
 ### Firebase tutorials
 
-CSS-Tricks — [Intro to Firebase and React](https://css-tricks.com/intro-firebase-react/)
-Nathan Sebhastian — [A Firebase in React Tutorial for Beginners](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial)
+CSS-Tricks — [Intro to Firebase and React](https://css-tricks.com/intro-firebase-react/)\
+Nathan Sebhastian — [A Firebase in React Tutorial for Beginners](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial)\
 Robin Wieruch — [Firebase as simple database to React app](https://sebhastian.com/react-firebase-real-time-database-guide)
 
 
