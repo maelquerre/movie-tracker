@@ -20,4 +20,4 @@ npm install
 
 #### Configure your `.env.local` file
 
-Copy the `.env` into a `.env.local` file and configure the variables  
+Copy the `.env` file into a `.env.local` file and configure the variables for the Firebase application.
